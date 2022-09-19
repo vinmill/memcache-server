@@ -6,9 +6,10 @@ parser = argparse.ArgumentParser(description='parse key pairs into a dictionary'
 class client(object):
     def __init__(self, num_clients = 3, target_port = 27700, target_host = 'localhost', **kwargs):
         object.__init__(self)
+        
         self.__dict__.update(kwargs)
         self.connection(target_host, target_port, kwargs)
-
+        
     # Create a connection to the server application on port 27700
     def connection(self, target_host, target_port, kwargs):
         try:
@@ -30,4 +31,4 @@ class client(object):
             tcp_socket.close()
 
 if __name__ == "__main__":
-    test_client = client(pam='spam is for me', lamb='asfd', cam='123453453')
+    test_client = client(pdam='lamasfasfdaasdfdsfsdadsfasdffasdf')
